@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include Head.ejs %>
+</head>
+
+<body>
+<% include Navbar.ejs %>
+
+<div id="changepswd" class="w3-box-changepswd">
+      <h2>Change Password</h2>
+      <br/>
+      <form method="post" action="">
+
+      <label for="oldPassword">Old Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="password" id="newPassword" name="newPassword" title="New password" />
+      <br>
+      <label for="newPassword">New Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
+      <br>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="text" id="token" name="token" title="Password Token" />
+      <br><br>
+      <p class="form-actions">
+      <input type="submit" value="Change Password" title="Change password" />
+      </p>
+
+      </form>
+</div>
+
+<% include Footer.ejs %>
+
+</body>
+</html>

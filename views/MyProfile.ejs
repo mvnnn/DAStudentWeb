@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include Head.ejs %>
+</head>
+
+<body>
+<% include Navbar.ejs %>
+
+<!--  ############################# End of Header ###########################################-->
+
+
+<!--  My Profile Tab in Students Portal-->
+<div id="profile" class="tab-pane fade in active">
+
+
+<div id="w">
+<div id="content" class="clearfix w3-box-center">
+  <div id="userphoto"><img src="images/avatar.png" alt="default avatar"></div>
+  <h1>Professor's  Profile</h1>
+  <br><br>
+  <nav id="profiletabs">
+      <ul class="nav nav-tabs">
+          <li><a href="#bio" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> About</a></li>
+          <li><a href="#settings" data-toggle="tab">Settings</a></li>
+    </ul>
+  </nav>
+  <br><br>
+  <section id="bio">
+
+    <p class="setting"><span>Name </span> abcdefgh </p>
+
+    <p class="setting"><span>email id</span>xyz@abc.com</p>
+
+    <p class="setting"><span>Area of Interest</span> blah blah...</p>
+
+    <p class="setting"><span>Office Num </span>0732-3254632</p>
+
+  </section>
+
+  <section id="settings" class="hidden">
+    <p>Edit your user settings:</p>
+
+    <p class="setting"><span>E-mail Address <img src="images/edit.png" alt="*Edit*"></span> lolno@gmail.com</p>
+
+    <p class="setting"><span>Name <img src="images/edit.png" alt="*Edit*"></span> abcdefg</p>
+
+    <p class="setting"><span>Area of Interest <img src="images/edit.png" alt="*Edit*"></span> 29/02/1995</p>
+
+    <p class="setting"><span>Office Num<img src="images/edit.png" alt="*Edit*"></span>987654321</p>
+  </section>
+</div><!-- @end #content -->
+</div><!-- @end #w -->
+
+
+  <script type="text/javascript">
+  $(function(){
+    $('#profiletabs ul li a').on('click', function(e){
+      e.preventDefault();
+      var newcontent = $(this).attr('href');
+
+      $('#profiletabs ul li a').removeClass('sel');
+      $(this).addClass('sel');
+
+      $('#content section').each(function(){
+        if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+      });
+
+      $(newcontent).removeClass('hidden');
+    });
+  });
+  </script>
+
+  </div>
+  <!-- End of Profile -->
+
+<% include Footer.ejs %>
+
+</body>
+</html>
