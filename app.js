@@ -13,9 +13,12 @@ var bodyParser = require('body-parser');
 var Home = require('./routes/private/Home');
 var MyProfile = require('./routes/private/MyProfile');
 var MyCourses = require('./routes/private/MyCourses');
-var Queires = require('./routes/private/Queires');
+var Queries = require('./routes/private/Queries');
 var Repository = require('./routes/private/Repository');
 var Navbar = require('./routes/private/Navbar');
+
+var Academic = require('./routes/private/Academics');
+var Results = require('./routes/private/Results');
 
 
 //CORS middleware
@@ -47,7 +50,9 @@ app.set('x-powered-by',false);
 app.get('/Home', Home.home);
 app.get('/MyProfile', MyProfile.myProfile);
 app.get('/MyCourses', MyCourses.myCourses);
-app.get('/Queires', Queires.queires);
+app.get('/Academic', Academic.academic);
+app.get('/Results', Results.results);
+app.get('/Queries', Queries.queries);
 app.get('/Repository', Repository.repository);
 
 app.get('/Preferences', Navbar.preferences);

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include Head.ejs %>
+</head>
+
+<body>
+<% include Navbar.ejs %>
+
+<!--  Result Tab in Students Portal-->
+    <div id="menu3">
+        <div class="w3-box-center-table">
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+        <thead>
+        <tr class="w3-light-grey">
+          <th class="w3-grey">Semester</th>
+          <th class="w3-grey">Total Credits</th>
+          <th class="w3-grey">Credits Earned</th>
+          <th class="w3-grey">SPI</th>
+          <th class="w3-grey">CPI</th>
+        </tr>
+        </thead>
+        <tr data-toggle="modal" data-target="#semester1">
+          <td>Semester-1</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>97</td>
+        </tr>
+        <tr>
+          <td>Semester-2</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <td>Semester-3</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>56</td>
+        </tr>
+         <tr>
+          <td>Semester-4</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>3</td>
+          <td>78</td>
+        </tr>
+         <tr>
+          <td>Semester-5</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4</td>
+          <td>100</td>
+        </tr>
+         <tr>
+          <td>Semester-6</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>67</td>
+        </tr>
+         <tr>
+          <td>Semester-7</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>67</td>
+        </tr>
+         <tr>
+          <td>Semester-8</td>
+          <td>Johnson</td>
+          <td>Check</td>
+          <td>4.5</td>
+          <td>67</td>
+        </tr>
+  </table>
+  <br>
+</div>
+
+
+    </div>
+
+
+
+  <div class="modal fade" id="semester1" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Semester 1</h4>
+                </div>
+                <div class="modal-body">
+                          <div class="w3-box-center-table">
+                          <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
+                              <thead>
+                              <tr class="w3-light-grey">
+                                <th class="w3-grey">Courses</th>
+                                <th class="w3-grey">Credits</th>
+                                <th class="w3-grey">Grade</th>
+                              </tr>
+                              </thead>
+                              <tr>
+                                <td>Computer Networks</td>
+                                <td>4.5</td>
+                                  <td>8</td>
+
+                              </tr>
+                              <tr>
+                                <td>Embedded Hardware Design</td>
+                                <td>3</td>
+                                  <td>6</td>
+                              </tr>
+                              <tr>
+                                <td>DBMS</td>
+                               <td>4.5</td>
+                                  <td>8</td>
+                              </tr>
+                               <tr>
+                                <td>Business Management</td>
+                             <td>4.5</td>
+                                  <td>5</td>
+                              </tr>
+                               <tr>
+                                <td>Intro to Algo</td>
+                              <td>4.5</td>
+                                  <td>10</td>
+                              </tr>
+                               <tr>
+                                <td>SEN</td>
+                             <td>4.5</td>
+                                  <td>9</td>
+                              </tr>
+                          </table>
+                          </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<% include Footer.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include Head.ejs %>
+</head>
+
+<body>
+<% include Navbar.ejs %>
+
+<!--  Acad Info Tab in Students Portal-->
+<div id="menu1" class=" w3-box-center-white">
+
+  <div class="columns">
+      <div class="w3-card-8 w3-red w3-div-card" data-toggle="modal" data-target="#myModaltime"><h3 class="w3-padding-card">TimeTable</h3></div>
+      <div class="w3-card-8 w3-black w3-div-card" data-toggle="modal" data-target="#myModalcourse"><h3 class="w3-padding-card" >Courses</h3></div>
+      <div class="w3-card-8 w3-blue w3-div-card" data-toggle="modal" data-target="#myModalbtech"><h3 class="w3-padding-card">Btech Curriculum</h3></div>
+      <div class="w3-card-8 w3-green w3-div-card" data-toggle="modal" data-target="#myModalother"><h3 class="w3-padding-card">Other Information</h3></div>
+
+  </div>
+<div class="clear"></div>
+
+        <div class="container">
+
+        <!-- Modal  Time table-->
+          <div class="modal fade" id="myModaltime" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Time-Table & Slots</h4>
+                </div>
+                <div class="modal-body">
+                 <ul class="w3-ul">
+                    <a href="E:\DA-IICT\daiictInfo\lecture.pdf" target="_blank"><li>Lecture Time Table</li></a>
+                    <a href="E:\DA-IICT\daiictInfo\lab.pdf" target="_blank"><li>Lab Time Table</li></a>
+                    <li>Insem-1 Time Table</li>
+                    <li>Insem-2 Time Table</li>
+                    <li>End Sem Time Table</li>
+                    <a href="E:\DA-IICT\daiictInfo\slot.pdf" target="_blank"><li>Slot- Winter 2015-16</li></a>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal  Course-->
+          <div class="modal fade" id="myModalcourse" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Courses</h4>
+                </div>
+                <div class="modal-body">
+                  <ul class="w3-ul">
+                    <li>Core</li>
+                    <li>Elective</li>
+                    <li>Coures Offered</li>
+                    <li>etc.. btech cs or ict..</li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Modal  Btech Curriculum -->
+          <div class="modal fade" id="myModalbtech" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Btech Curriculum</h4>
+                </div>
+                <div class="modal-body">
+                       <ul class="w3-ul">
+                    <a href="E:\DA-IICT\daiictInfo\btechcur\AcademicRequirements.pdf" target="_blank"><li>Academic Requirements</li></a>
+                    <a href="E:\DA-IICT\daiictInfo\btechcur\BtechCurriculum.pdf" target="_blank"><li>Btech Curriculum</li></a>
+                    <a href="E:\DA-IICT\daiictInfo\btechcur\CPICalculation.pdf" target="_blank"><li>CPI Calculation</li></a>
+                    <li>etc....</li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal  Other Information -->
+          <div class="modal fade" id="myModalother" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Other Important Info</h4>
+                </div>
+                <div class="modal-body">
+                  <ul class="w3-ul">
+                    <li>Academic Calender</li>
+                    <li>Holidays 2015-16</li>
+                    <li>It-Info</li>
+                    <li>Faculty Email and Shortname</li>
+                    <li>etc</li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+              </div>
+            </div>
+          </div>
+
+            </div>
+
+
+</div>
+
+
+<% include Footer.ejs %>
+
+</body>
+</html>
