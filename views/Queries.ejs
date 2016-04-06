@@ -9,18 +9,43 @@
 
 <!--  Queries Tab in Students Portal-->
 <div id="query" class="w3-box-center">
+
+           <ul class="w3-ul w3-card-4">
+              <li>@EL205: What is the course for the second insem? </li>
+              <li>@SC206: Is there a class tomorrow? </li>
+              <li>@IT214: Last date for submission of project?</li>
+              <li>@IT214: Do we have lab exams?</li>
+          </ul>
+          <br>
+          <br>
+          <div class="w3-dropdown-click">
+               <button onclick="myFunction()" class="w3-btn">Select Course</button>
+                  <div id="repo" class="w3-dropdown-content w3-card">
+                  <a href="#">EL203</a>
+                  <a href="#">SC116</a>
+                  <a href="#">SC476</a>
+                  <a href="#">IT108</a>
+                  <a href="#">HM311</a>
+                 </div>
+          </div>
+
+      <script>
+          function myFunction() {
+          document.getElementById("repo").classList.toggle("w3-show");
+          }
+      </script>
+        <br>
+        <br>
+
+
             <form class="w3-container">
-            <p>
-            <label class="w3-label">Name/Email</label>
-            <input class="w3-input" type="text"></p>
-            <br>
             <label class="w3-label">Enter Query</label>
             <br><br>
-            <textarea>Some text...</textarea>
+            <textarea>Write new query....</textarea>
             </form>
 
             <br>
-              <button id="myBtn" class="w3-btn w3-ripple w3-teal w3-round-large">Submit</button>
+              <button id="myBtn" class="w3-btn w3-ripple w3-teal w3-round-large">Post</button>
 
 
       </div>
