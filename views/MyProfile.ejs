@@ -8,6 +8,7 @@
 <% include Navbar.ejs %>
 
 <!--  My Profile Tab in Students Portal-->
+
 <div id="profile" class="tab-pane fade in active">
 
 
@@ -16,59 +17,25 @@
   <div id="userphoto"><img src="images/avatar.png" alt="default avatar"></div>
   <h1>Users Profile</h1>
   <br><br>
-  <nav id="profiletabs">
-      <ul class="nav nav-tabs">
-          <li><a href="#bio" data-toggle="tab"><span class="glyphicon glyphicon-user"></span> About</a></li>
-          <li><a href="#settings" data-toggle="tab">Settings</a></li>
-    </ul>
-  </nav>
   <br><br>
-  <section id="bio">
+  <br>
 
+  <section id="bio">
+    <br>
     <p class="setting"><span>Name </span> abcdefgh </p>
 
     <p class="setting"><span>ID</span> 201301xxx</p>
 
     <p class="setting"><span>DOB</span> 29/02/1995</p>
 
-    <p class="setting"><span>Mobile Num </span> 987654321</p>
-
   </section>
 
-  <section id="settings" class="hidden">
-    <p>Edit your user settings:</p>
-
-    <p class="setting"><span>E-mail Address <img src="images/edit.png" alt="*Edit*"></span> lolno@gmail.com</p>
-
-    <p class="setting"><span>Name <img src="images/edit.png" alt="*Edit*"></span> abcdefg</p>
-
-    <p class="setting"><span>DOB <img src="images/edit.png" alt="*Edit*"></span> 29/02/1995</p>
-
-    <p class="setting"><span>Mobile Num <img src="images/edit.png" alt="*Edit*"></span>987654321</p>
-  </section>
 </div><!-- @end #content -->
 </div><!-- @end #w -->
 
 
-  <script type="text/javascript">
-  $(function(){
-    $('#profiletabs ul li a').on('click', function(e){
-      e.preventDefault();
-      var newcontent = $(this).attr('href');
-
-      $('#profiletabs ul li a').removeClass('sel');
-      $(this).addClass('sel');
-
-      $('#content section').each(function(){
-        if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
-      });
-
-      $(newcontent).removeClass('hidden');
-    });
-  });
-  </script>
-
   </div>
+  <!-- End of Profile -->
 
 <% include Footer.ejs %>
 
