@@ -6,6 +6,10 @@ var PostSchema = new mongoose.Schema({
     type:Number,
     required:true
   },
+  semester:{
+    type:Number,
+    required:true
+  },
   coursename:{
     type:String,
     required:true
