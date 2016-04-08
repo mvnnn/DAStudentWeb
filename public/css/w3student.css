@@ -504,3 +504,13 @@ textarea {
 div.columns       { width: 900px; }
 div.columns div   { width: 300px; height: 200px; float: left; border-radius: 16px;  }
 div.clear         { clear: both; }
+
+
+.affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
