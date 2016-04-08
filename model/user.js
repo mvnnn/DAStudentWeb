@@ -5,8 +5,8 @@ var postSchema= Schema({
   id:{
     type:Number,
     required:true,
-    min:,
-    max:
+    min:201301001,
+    max:201301200
   },
   name:{
     type:String,
