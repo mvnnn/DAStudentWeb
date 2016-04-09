@@ -9,8 +9,9 @@ _id : {
         
 },
 semester:{
-      type:Number,
-      required:true
+      sem : {type:Number,
+             required:true
+      },
       course : [{coursename:{
                       type:String,
                       required:true
