@@ -8,26 +8,26 @@ _id : {
         required:true
         
 },
-semester:{
-      type:Number,
-      required:true
-      course : [{coursename:{
-                      type:String,
-                      required:true
-                },
-                courseid:{
-                      type:String,
-                      required:true
-                },
-                credit:{
-                      type:Number,
-                      required:true
-                },
-                grade:{
-                      type:String,
-                      required:true
-                }}]
-    }
+course : [{coursename:{
+                type:String,
+                required:true
+         },
+          courseid:{
+                type:String,
+                required:true
+         },
+         credit:{
+                type:Number,
+                required:true
+         },
+         grade:{
+                type:String,
+                required:true
+         },
+         sem:{
+                type:Number,
+                required:true
+         }}]
 });
 
 module.exports = mongoose.model("info", PostSchema);
