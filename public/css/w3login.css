@@ -321,12 +321,13 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-box-center{border-radius: 32px; border: 2px solid #ffffff; padding-right:32px !important; padding-left:32px !important; padding-top:64px !important;padding-bottom:64px !important;margin:16px !important}
 .w3-theme-action {color:#fff !important; background-color:#1e3552 !important}
 
- .modal-header, h4, .close {
+ .modal-header-blue, h4, .close-blue {
       background-color: #244063;
       color:white !important;
       text-align: center;
       font-size: 30px;
   }
-  .modal-footer {
+  .modal-footer-blue {
       background-color: #244063;
+      
   }
