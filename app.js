@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var mongoose=require('mongoose');
 var Cookies = require( "cookies" );
 var port=process.env.PORT || 3000 ;
-var dburl='mongodb://student:senteam15@ds011389.mlab.com:11389/courseaid';
+var dburl='mongodb://student:**@ds011389.mlab.com:11389/courseaid';
 mongoose.connect(dburl);
 // var authenticate = require('./routes/authenticate');
 // var admin = require('./routes/admin');
