@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<% include Head.ejs %>
+<link rel="stylesheet" href="css/w3login.css">
+</head>
+
+<body>
+<% include CourseNavbar.ejs %>
+
+<div class="w3-container w3-padding-64 w3-light-grey" align="center">
+
+  <div class="w3-container" style="width:800px;" align="left">
+
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header-blue" style="padding:35px 50px;">
+        <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
+      </div>
+      <div class="modal-body" style="padding:40px 50px;">
+        <form role="form">
+          <div class="form-group">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="psw"><span class="glyphicon glyphicon-eye-close"></span> Password</label>
+            <input type="password" class="form-control" id="psw" placeholder="Enter password">
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox" value="" checked>Remember me</label>
+
+          </div>
+            <button type="submit" class="btn btn-success btn-block w3-theme-dark-blue w3-padding"><span class="glyphicon glyphicon-off"></span> Login</button>
+        </form>
+      </div>
+      <div class="modal-footer-blue" style="padding:25px 25px 35px 25px;">
+        <p><span class="w3-text-white" style="float:left;"><a href="#" >Create Account</a></span>
+        <span class="w3-text-white" style="float:right;"> <a href="#">Forgot Password?</a></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include Footer.ejs %>
+
+</body>
+</html>

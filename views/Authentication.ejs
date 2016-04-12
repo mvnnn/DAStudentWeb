@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CourseAid</title>
+<% include Head.ejs %>
+<link rel="stylesheet" href="css/w3login.css">
+</head>
+
+<body>
+
+<!-- ##################################### Opening Page of Student Assessment Portal ########################################## -->
+
+
+<div class="w3-container w3-padding-64 w3-light-grey">
+
+	<div class="w3-container w3-theme-action w3-box-center">
+
+		<h1 class="w3-ensize" align="center"><b>Welcome to  CourseAid</b></h1>
+		<br>
+		<p align="center">
+		<a href="/Login"><button id="myBtn" class="w3-btn w3-ripple w3-blue-grey w3-round-large">LOGIN</button></a>
+		<a href="/SignUp"><button id="myBttn" class="w3-btn w3-ripple w3-red w3-round-large">SIGN UP</button></a>
+		</p>
+		<br>
+		<p align="center"><a href="#" style="text-decoration:underline; color:white" data-toggle="modal" data-target="#myModal">Need Help?</a></p>
+	</div>
+</div>
+
+
+
+  
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="insModalLabel">Instructions</h3>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">
+	Welcome to the WILP Portal. 
+	</p>
+	<p><strong>For Students</strong>: Please enter your 11-character student id (for ex. 200118TS123) in the username field and your date of birth (in ddmmyyyy format) as your password. Do not change the default campus selected (WILP).</p>
+
+	<p>For example, if your date of birth is March 1st, 1990, then your password will be 01031990</p>
+
+	<p><strong>For On-campus faculty</strong>: Please click on the campus corresponding to your email domain (for ex. Goa for email ids like @goa.bits-pilani.ac.in) and enter your BITS Mail username in the username field. Your default password will be your 4-digit PSRN number, prefixed with the letter corresponding to your campus, in uppercase. (for ex. P0123, G0123, or H0123 depending on your campus)</p>
+
+	
+
+	<p><span style="color:red">If you are unable to login to the eLearn portal with your password, or have forgotten your password, please click on the "Forgot Password?" link</span>, select the campus corresponding to your BITS Mail account (for ex. Goa for email ids like @goa.bits-pilani.ac.in) and enter your BITS Mail username. An email with the password reset instructions will be sent to the id provided by you.</p>
+
+	<p>If you're unable to login to your BITS Mail account, please write to <a href="mailto:mailadmin@wilp.bits-pilani.ac.in">mailadmin@wilp.bits-pilani.ac.in</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<%include Footer.ejs %>
+
+</body>
+</html>
