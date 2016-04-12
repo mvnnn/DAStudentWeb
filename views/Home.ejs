@@ -22,34 +22,64 @@
   <p>  Our project aims to develop a Student Assessment Portal, which would help in making the grading process more efficient and in increasing student's awareness about their academic performance. It would also help in bridging the gap between professor and student by making the relevant information more accessible to the students and providing a platform for student-professor interaction. It helps to reduce the time and efforts put in maintaining logs of various assessments and computing their aggregate. It also provides few features which would help student to deal with their academic's better.
               <br><br>
 
-              Initially the student need to sign up using their webmail ID. Then the students can select the courses for which they have registered. The marks obtained by each student would be accessible to them just after the professor uploads the updated excel sheet. They can view the class average and their respective percentile in each course. They can apply for recheck if required. They can ask any course related query from the professor. They can use SPI/CPI calculator to estimate the minimum effort required in order to achieve it. They can select the courses for which they would like to receive the notification.
+              Initially the student need to sign up using their webmail ID. Then the students can select the courses for which they have registered. The marks obtained by each student would be accessible to them just after the professor uploads the updated excel sheet. They can view the class average and their respective percentile in each course. They can apply for recheck if required. They can ask any course related notification from the professor. They can use SPI/CPI calculator to estimate the minimum effort required in order to achieve it. They can select the courses for which they would like to receive the notification.
 
 </p>
 </div>
 <div class="w3-third w3-container">
   <h2>Notification</h2>
-  <div class="w3-container w3-section w3-red w3-round">
-<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">×</span>
-  <h3>Danger!</h3>
-  <p>Red often indicates a dangerous or potentially negative action.</p>
-</div>
-
-    <div class="w3-card-4 w3-green ">
-      <h3> <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding">×</span></h3>
-      <p class="w3-margin w3-padding">Green often indicates something successful or positive. blah blah</p>
-    </div>
-    <div class="w3-card-4 w3-blue ">
-      <h3> <span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding">×</span></h3>
-  <p class="w3-margin w3-padding">Blue often indicates a neutral informative change </p>
+  
+<div id="notification" class="w3-card">
+<div class="w3-accordion w3-light-grey">
+  <button onclick="myFunction('reply')" class="w3-btn-block w3-left-align w3-blue">* Marks uploaded*</button>
+  <div id="reply" class="w3-accordion-content w3-container">
+  <br>
+    <p> EL203 marks have been uploaded by the professor</p>
+    <p> In case of any query mail back to me</p>
+    
+   </div>
 </div>
 </div>
+<br>
+
+<div id="abc" class="w3-card">
+<div class="w3-accordion w3-light-grey">
+  <button onclick="myFunction('acd')" class="w3-btn-block w3-left-align w3-green">* Lecture Cancelled*
+  </button>
+  <div id="acd" class="w3-accordion-content w3-container">
+  <br>
+    <p> I will not take any lectures this week</p>
+    <p> Go enjoy there is a holiday for everyone..</p>
+    
+   </div>
+</div>
 </div>
 
 
-<br><br>
-<br><br>
-<br><br>
+</div>
+</div>
 
+
+
+
+
+
+
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+     if (x.classList) {
+         x.classList.toggle("w3-show");
+     } else {
+         // Fallback for IE9 and earlier
+         if (x.className.indexOf("w3-show") == -1)
+             x.className = x.className + " w3-show";
+         else
+             x.className = x.className.replace("w3-show", "");
+     }
+ }
+ </script>
 <!--  End of Home page  -->
 
 <% include Footer.ejs %>
