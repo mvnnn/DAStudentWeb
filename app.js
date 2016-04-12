@@ -49,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('x-powered-by',false);
 
 // private routes
+app.get('/', Authentication.authentication);
 app.get('/Home', Home.home);
 app.get('/MyProfile', MyProfile.myProfile);
 app.get('/MyCourses', MyCourses.myCourses);
