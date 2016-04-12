@@ -2,20 +2,26 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var postSchema= Schema({
-  id:{
+  std_id:{
     type:Number,
-    required:true,
-    min:201301001,
-    max:201301200
+    required:true
   },
-  name:{
+  std_name:{
     type:String,
     required:true
   },
   DOB:{
     type:String,
     required:true
+  },
+  password:{
+    type:String,
+    required:true
+  },
+  token:{
+    type:String,
+    required:true
   }
 });
 
-module.exports=mongoose.model('user',postSchema);
+module.exports=mongoose.model('stduser',postSchema);

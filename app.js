@@ -6,10 +6,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose=require('mongoose');
+var Cookies = require( "cookies" );
+var port=process.env.PORT || 3000 ;
+var dburl='mongodb://student:senteam15@ds011389.mlab.com:11389/courseaid';
+mongoose.connect(dburl);
 // var authenticate = require('./routes/authenticate');
 // var admin = require('./routes/admin');
-
+var Authentication = require('./routes/private/Authentication');
 var Home = require('./routes/private/Home');
 var MyProfile = require('./routes/private/MyProfile');
 var MyCourses = require('./routes/private/MyCourses');
@@ -50,6 +54,11 @@ app.set('x-powered-by',false);
 
 // private routes
 app.get('/', Authentication.authentication);
+app.get('/Authentication', Navbar.logout);
+app.get('/Login', Authentication.login);
+app.post('/Login', Authentication.loginAuth);
+app.get('/SignUp', Authentication.signUp);
+app.post('/SignUp', Authentication.signUpData);
 app.get('/Home', Home.home);
 app.get('/MyProfile', MyProfile.myProfile);
 app.get('/MyCourses', MyCourses.myCourses);
