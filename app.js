@@ -75,9 +75,12 @@ app.get('/Repository', Repository.repository);
 app.get('/SPI', Spi.spi_cpi);
 app.get('/AcadStatus', AcadStatus.acadStatus);
 // app.get('/Preferences', Navbar.preferences);
+// app.get('/Queires', Queires.queires);
+app.get('/Repository', Repository.repository);
 app.get('/ChangePass', Navbar.changePass);
+app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
-app.get('/Logout', Navbar.logout);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

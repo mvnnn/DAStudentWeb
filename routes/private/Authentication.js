@@ -28,7 +28,7 @@ exports.signUpData=function(req,res){
   };
 
   var pwd = generator(7);
-  var gen_token = generator(4) + req.body.id + generator(4);
+  var gen_token = generator(4) + req.body.std_id + generator(4);
 
     var smtp = nodemailer.createTransport("SMTP", {
         service: "Gmail",
