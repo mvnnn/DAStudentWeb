@@ -80,7 +80,7 @@ app.get('/Repository', Repository.repository);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
-
+app.get('/*', Authentication.authentication);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

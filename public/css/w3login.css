@@ -124,7 +124,7 @@ img.w3-image,.w3-image img{max-width:100%;height:auto}
 .w3-progress-container{width:100%;height:1.5em;position:relative;background-color:#f1f1f1}
 .w3-progressbar{background-color:#757575;height:100%;position:absolute;line-height:inherit}
 input[type=checkbox].w3-check,input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
-input[type=checkbox].w3-check:checked+.w3-validate,input[type=radio].w3-radio:checked+.w3-validate{color:#009688} 
+input[type=checkbox].w3-check:checked+.w3-validate,input[type=radio].w3-radio:checked+.w3-validate{color:#009688}
 input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:disabled+.w3-validate{color:#aaa}
 .w3-responsive{overflow-x:auto}
 .w3-container:after,.w3-row:after,.w3-row-padding:after,.w3-topnav:after,.w3-clear:after,.w3-btn-group:before,.w3-btn-group:after{content:"";display:table;clear:both}
@@ -173,8 +173,8 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 @media (max-width:601px){.w3-modal-content{margin:50px 10px 10px 10px;width:auto !important}}
 @media (max-width:768px){.w3-modal-content{width:500px}}
 @media (min-width:992px){.w3-modal-content{width:900px}}
-@media screen and (max-width:601px){.w3-topnav a{display:block}.w3-navbar li{float:none}.w3-navbar ul.w3-right{float:none !important;margin:0;padding:0}}	
-@media screen and (max-width:601px){.w3-topnav .w3-dropdown-hover .w3-dropdown-content,.w3-navbar .w3-dropdown-click .w3-dropdown-content,.w3-navbar .w3-dropdown-hover .w3-dropdown-content{position:relative}}	
+@media screen and (max-width:601px){.w3-topnav a{display:block}.w3-navbar li{float:none}.w3-navbar ul.w3-right{float:none !important;margin:0;padding:0}}
+@media screen and (max-width:601px){.w3-topnav .w3-dropdown-hover .w3-dropdown-content,.w3-navbar .w3-dropdown-click .w3-dropdown-content,.w3-navbar .w3-dropdown-hover .w3-dropdown-content{position:relative}}
 @media screen and (max-width:601px){.w3-topnav,.w3-navbar{text-align:center}}
 @media (max-width:601px){.w3-hide-small{display:none !important}}
 @media (max-width:991px) and (min-width:601px){.w3-hide-medium{display:none !important}}
@@ -329,5 +329,5 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
   }
   .modal-footer-blue {
       background-color: #244063;
-      
+
   }

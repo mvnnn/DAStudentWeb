@@ -76,7 +76,7 @@ exports.loginAuth=function(req,res){
     if(response){
       // console.log(response.token);
       res.cookie('token', response.token, { maxAge: 900000000, httpOnly: true });
-      res.render('Home');
+      res.redirect('Home');
     }
     else{
       res.render('SignUp');
