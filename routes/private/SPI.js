@@ -8,18 +8,17 @@ var app = express();
 var methodOverride = require('method-override');
 app.use(cookieParser());
 // var db = mongoose.connection;
-exports.myProfile=function(req,res){
-
-  StdUser.findOne({token:req.cookies.token}, function (err, response) {
-    // console.log(response);
-    if(response){
-      Info.find({std_id:response.std_id},functon(err, respo){
-        TCourse.find({});
-      });
-      res.render('SPI');
-    }
-    else{
-      res.render('Authentication');
-    }
-  });
+exports.spi_cpi=function(req,res){
+    res.render('SPI');
+  // StdUser.findOne({token:req.cookies.token}, function (err, response) {
+  //   // console.log(response);
+  //   if(response){
+  //     // Info.find({std_id:response.std_id},functon(err, respo){
+  //     // });
+  //     res.render('SPI');
+  //   }
+  //   else{
+  //     res.render('Authentication');
+  //   }
+  // });
 };
