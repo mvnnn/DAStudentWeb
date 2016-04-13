@@ -3,16 +3,16 @@ var Schema = mongoose.Schema;
 
 var PostSchema = new mongoose.Schema({
 
-_id : {
+std_id : {
         type:Number,
         required:true
-        
 },
-course : [{coursename:{
+course_info : [
+        {course_name:{
                 type:String,
                 required:true
          },
-          courseid:{
+          course:{
                 type:String,
                 required:true
          },

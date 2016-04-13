@@ -42,8 +42,8 @@ exports.signUpData=function(req,res){
 
     mailList ={};
     mailList.to = req.body.id + "@daiict.ac.in";
-    mailList.subject = "halo bhaii.. lejo";
-    mailList.text = 'password is  "'+ pwd+'"';
+    mailList.subject = "Student webite password";
+    mailList.text = 'Your password is : "'+ pwd+'"';
     smtp.sendMail(mailList, function(error, response){
         if(error){
             console.log(error);

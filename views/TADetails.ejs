@@ -13,15 +13,26 @@
                 <thead>
                 <tr class="w3-light-grey">
                   <th class="w3-grey">Name</th>
-                  <th class="w3-grey">Email Id or ID</th>
-                  <th class="w3-grey">Contact</th>
+                  <th class="w3-grey">ID</th>
+                  <th class="w3-grey">Contact No</th>
+                  <th class="w3-grey">Room No</th>
+                  <th class="w3-grey">Course</th>
                 </tr>
                 </thead>
-                <tr>
-                  <td>Shivang</td>
-                  <td>shivang@gmail.com</td>
-                  <td>A-112, 982309180 </td>
-                </tr>
+
+                <% if(data) {%>
+                <% for(var i=0; i < data.length; i++) { %>
+              <tr>
+                <form method="get" name="form">
+                <td><p class="w3-input w3-border " name="std_ID"><%= data[i].ta_name%></p></td>
+                <td><p class="w3-input w3-border " name="std_ID"><%= data[i].ta_id%></p></td>
+                <td><p class="w3-input w3-border " name="std_ID"><%= data[i].ta_phone_no%></p></td>
+                <td><p class="w3-input w3-border " name="std_ID"><%= data[i].ta_room_no%></p></td>
+                <td><p class="w3-input w3-border " name="std_ID"><%= data[i].course%></p></td>
+                </form>
+              </tr>
+              <% } %>
+              <% } %>
             </table>
             </div>
             </p>
