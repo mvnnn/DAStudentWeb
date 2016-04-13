@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 var mongoose=require('mongoose');
 var Cookies = require( "cookies" );
 var port=process.env.PORT || 3000 ;
-var dburl='mongodb://student:**@ds011389.mlab.com:11389/courseaid';
+var dburl='mongodb://student:senteam15@ds011389.mlab.com:11389/courseaid';
 mongoose.connect(dburl);
 // var authenticate = require('./routes/authenticate');
 // var admin = require('./routes/admin');
@@ -80,7 +80,7 @@ app.get('/Repository', Repository.repository);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
-app.get('/*', Authentication.authentication);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
