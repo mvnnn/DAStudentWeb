@@ -6,14 +6,18 @@ var PostSchema = new mongoose.Schema({
     type:Number,
     required:true
   },
-  password:{
+  course:{
     type:String,
     required:true
   },
-  postedBy: {
-    type: mongoose.Schema.Types.Mixed,
-    ref: 'user'
+  std_id:{
+    type:Number,
+    required:true
+  },
+  post:{
+    type:String,
+    required:true
   }
 });
 
-module.exports = mongoose.model("login", PostSchema);
+module.exports = mongoose.model("pComment", PostSchema);

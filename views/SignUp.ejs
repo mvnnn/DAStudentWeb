@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assessment Portal</title>
+  	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/w3login.css">
+</head>
+
+<body>
+
+<!-- ##################################### Opening Page of Student Assessment Portal ########################################## -->
+
+<div class="w3-container w3-white w3-border">
+        <img src="/images/logo.jpg" class = "w3-margin-top w3-margin-bottom" align = "left" style="height:75px;"></img>
+      <h2 align = "right" style="font-family:'Comic Sans MS';"><br>CourseAid</h2>
+
+    </div>
+
+    <div class="w3-container w3-padding-64 w3-light-grey" align="center">
+
+      <div class="w3-container" style="width:800px;" align="left">
+
+        <!-- Modal content-->
+        <div class="modal-content w3-box-center-signup">
+          <div class="modal-header-blue" style="padding:35px 50px;">
+            <h4><span class="glyphicon glyphicon-user"></span> Sign Up</h4>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+
+        <form role="form" method="post">
+          <div class="form-group">
+            <label for="usrname">DAIICT ID</label>
+            <input type="number" class="form-control" id="usrname" placeholder="Enter your Id" name="std_id">
+          </div>
+
+          <div class="form-group">
+            <label for="name"> Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your Name" name="std_name">
+          </div>
+
+          <div class="form-group">
+          <label for="date">Date of Birth</label>
+          <input type="date" class="form-control" id="date" name="dob">
+          </div>
+
+
+          <input type="submit" class="btn btn-success btn-block w3-theme-dark-blue" value="Register">
+
+        </form>
+      </div>
+
+      <div class="modal-footer-blue" style="padding:35px 50px;">
+    </div>
+
+	</div>
+</div>
+
+<%include Footer.ejs %>
+</body>
+</html>

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<% include Head.ejs %>
-<link rel="stylesheet" href="css/w3login.css">
+<title>Assessment Portal</title>
+  	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/w3login.css">
 </head>
 
 <body>
-<% include CourseNavbar.ejs %>
+
+<!-- ##################################### Opening Page of Student Assessment Portal ########################################## -->
+
+<div class="w3-container w3-white w3-border">
+        <img src="/images/logo.jpg" class = "w3-margin-top w3-margin-bottom" align = "left" style="height:75px;"></img>
+      <h2 align = "right" style="font-family:'Comic Sans MS';"><br>CourseAid</h2>
+
+    </div>
 
 <div class="w3-container w3-padding-64 w3-light-grey" align="center">
 
-  <div class="w3-container" style="width:800px;" align="left">
+	<div class="w3-container" style="width:800px;" align="left">
 
 
     <!-- Modal content-->
@@ -19,28 +32,25 @@
         <h4><span class="glyphicon glyphicon-lock"></span>Login</h4>
       </div>
       <div class="modal-body" style="padding:40px 50px;">
-        <form role="form">
+        <form role="form" method="post">
           <div class="form-group">
-            <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            <label for="usrname"><span class="glyphicon glyphicon-user"></span> ID</label>
+            <input type="text" class="form-control" id="usrname" placeholder="Enter email" name="std_id">
           </div>
           <div class="form-group">
             <label for="psw"><span class="glyphicon glyphicon-eye-close"></span> Password</label>
-            <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            <input type="password" class="form-control" id="psw" placeholder="Enter password" name="password">
           </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value="" checked>Remember me</label>
-
-          </div>
-            <button type="submit" class="btn btn-success btn-block w3-theme-dark-blue w3-padding"><span class="glyphicon glyphicon-off"></span> Login</button>
+          <input type="submit" class="btn btn-success btn-block w3-theme-dark-blue w3-padding" value="Login">
         </form>
       </div>
       <div class="modal-footer-blue" style="padding:25px 25px 35px 25px;">
-        <p><span class="w3-text-white" style="float:left;"><a href="#" >Create Account</a></span>
-        <span class="w3-text-white" style="float:right;"> <a href="#">Forgot Password?</a></span></p>
-      </div>
+  <p><span class="w3-text-white" style="float:left;"><a href="#" >Create Account</a></span>
+  <span class="w3-text-white" style="float:right;"> <a href="#">Forgot Password?</a></span></p>
+</div>
     </div>
-  </div>
+
+	</div>
 </div>
 
 <% include Footer.ejs %>

@@ -7,8 +7,10 @@
 <body>
 <% include Navbar.ejs %>
 
+<!--  ############################# End of Header ###########################################-->
+
+
 <!--  My Profile Tab in Students Portal-->
-<br>
 <div id="profile" class="tab-pane fade in active">
 
 
@@ -21,21 +23,18 @@
   <br>
 
   <section id="bio">
-    <br>
-    <p class="setting"><span>Name </span> abcdefgh </p>
-    <p class="setting"><span>ID</span> 201301xxx</p>
-    <p class="setting"><span>DOB</span> 29/02/1995</p>
+
+    <p class="setting"><span>Name </span> <%= data.std_name %> </p>
+
+    <p class="setting"><span>ID</span> <%= data.std_id %></p>
+
+    <p class="setting"><span>DOB</span><%= data.DOB %></p>
+
   </section>
 
 </div><!-- @end #content -->
 </div><!-- @end #w -->
 
-
-  </div>
-  <br>
-  <!-- End of Profile -->
-
 <% include Footer.ejs %>
-
 </body>
 </html>

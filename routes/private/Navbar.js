@@ -1,15 +1,68 @@
-exports.preferences=function(req,res){
-  res.render('Preferences');
-};
+var StdUser = require('../../model/stduser');
+var Cookies = require( "cookies" );
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var app = express();
+var methodOverride = require('method-override');
+app.use(cookieParser());
+
+
 
 exports.changePass=function(req,res){
-  res.render('ChangePass');
+  StdUser.findOne({token:req.cookies.token}, function (err, response) {
+    // console.log(response);
+    if(response){
+      res.render('ChangePass');
+    }
+    else{
+      res.render('Authentication');
+    }
+    });
+};
+
+exports.PostchangePass=function(req,res){
+  StdUser.findOne({token:req.cookies.token}, function (err, response) {
+    // console.log(response);
+    if(response){
+      StdUser.update({std_id:response.std_id},
+        {std_id:response.std_id,
+        std_name:response.std_name,
+        DOB:response.dob,
+        password:req.body.confirmPassword,
+        token:response.token},
+        { upsert: true },
+        function(err, response){
+          if(err) throw err;
+          else res.redirect('Home');
+        });
+    }
+    else{
+      res.render('Authentication');
+    }
+    });
 };
 
 exports.help=function(req,res){
-  res.render('Help');
+  StdUser.findOne({token:req.cookies.token}, function (err, response) {
+    // console.log(response);
+    if(response){
+      res.render('Help');
+    }
+    else{
+      res.render('Authentication');
+    }
+  });
 };
 
 exports.logout=function(req,res){
-  res.render('Logout');
+  StdUser.findOne({token:req.cookies.token}, function (err, response) {
+    // console.log(response);
+    if(response){
+      res.clearCookie('token');
+      res.render('Authentication');
+    }
+    else{
+      res.render('Authentication');
+    }
+  });
 };

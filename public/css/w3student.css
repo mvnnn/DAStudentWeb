@@ -28,7 +28,7 @@ input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-sea
 fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}
 legend{border:0;padding:0}pre,textarea{overflow:auto}optgroup{font-weight:bold}
 /* End extract from normalize.css */
-html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5;height:100%;}
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}
 h1,h2,h3,h4,h5,h6,.w3-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
 .w3-serif{font-family:"Times New Roman",Times,serif}
@@ -88,7 +88,7 @@ img.w3-image,.w3-image img{max-width:100%;height:auto}
 .w3-topnav .w3-dropdown-hover a{border-bottom:0}
 .w3-opennav,.w3-closenav{color:inherit}
 .w3-opennav:hover,.w3-closenav:hover{cursor:pointer;opacity:0.8}
-.w3-navbar a,.w3-topnav a,.w3-sidenav a,.w3-dropnav a,.w3-pagination li a,.w3-hoverable t tr,.w3-btn,.w3-btn-floating,.w3-btn-floating-large
+.w3-navbar a,.w3-topnav a,.w3-sidenav a,.w3-dropnav a,.w3-pagination li a,.w3-hoverable tbody tr,.w3-btn,.w3-btn-floating,.w3-btn-floating-large
 {-webkit-transition:all 0.3s ease;transition:all 0.3s ease}
 .w3-sidenav{height:100%;width:200px;background-color:#fff;position:fixed !important;z-index:1;overflow:auto}
 .w3-sidenav a{padding:4px 2px 4px 16px}
@@ -504,8 +504,6 @@ textarea {
 div.columns       { width: 900px; }
 div.columns div   { width: 300px; height: 200px; float: left; border-radius: 16px;  }
 div.clear         { clear: both; }
-
-
 .affix {
       top: 0;
       width: 100%;
@@ -516,8 +514,6 @@ div.clear         { clear: both; }
   }
 
 
-
-
-/* footer end*/
-
 .w3-box-center-footer{border-radius: 16px; border: 2px solid #000000; padding-right:16px !important; padding-left:16px !important; padding-top:2px !important;padding-bottom:16px !important;margin:16px !important;}
+
+

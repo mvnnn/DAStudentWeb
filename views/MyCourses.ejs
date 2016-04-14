@@ -6,40 +6,34 @@
 
 <body>
 <% include Navbar.ejs %>
-
+<!--  ############################# End of Header ###########################################-->
+<!--  here it will include about the courses of professor...........-->
 <!--  My Courses Tab in Students Portal-->
 <div id="menu2">
 <div class="w3-box-center-table">
 <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
     <thead>
     <tr class="w3-light-grey">
-      <th class="w3-grey">Courses</th>
-      <th class="w3-grey">Info/Details</th>
-      <th class="w3-grey">Credits</th>
+      <th class="w3-grey">Course ID</th>
+      <th class="w3-grey">Course Name</th>
     </tr>
     </thead>
-    <tr>
-      <td><a href="MyCourses/CourseHome">Computer Networks</a></td>
-      <td>Johnson</td>
-      <td>4.5</td>
-    </tr>
 
+    <% if(data) {%>
+      <% for(var i=0; i < data.length; i++) { %>
+    <tr>
+      <form method="get" name="form">
+      <td><a href='MyCourses/<%= data[i].course %>/CourseHome'><%= data[i].course %></a></td>
+      </form>
+    </tr>
+    <% } %>
+    <% } %>
 </table>
 </div>
 
 
-  <br><br><br>
 
-
-    <!-- <div class="w3-accordion w3-light-grey"> -->
-
-
-
-
-
-
-</div>
-
+<br><br><br><br><br><br><br>
 
 <% include Footer.ejs %>
 
