@@ -11,7 +11,7 @@
 <br>
 
 <div class="w3-container">
-<div class="well"><h1 align="center">Welcome 201301xxx</h1></div>
+<div class="well"><h1 align="center">Welcome <%= std %></h1></div>
 
 </div>
 <br><br>
@@ -28,43 +28,23 @@
 </div>
 <div class="w3-third w3-container">
   <h2>Notification</h2>
-  
-<div id="notification" class="w3-card">
-<div class="w3-accordion w3-light-grey">
-  <button onclick="myFunction('reply')" class="w3-btn-block w3-left-align w3-blue">* Marks uploaded*</button>
-  <div id="reply" class="w3-accordion-content w3-container">
-  <br>
-    <p> EL203 marks have been uploaded by the professor</p>
-    <p> In case of any query mail back to me</p>
-    
-   </div>
+    <% if(cdata) {%>
+
+    <% for(var r=0; r < cdata.length; r++) { %>
+        <div id="notification" class="w3-card">
+        <div class="w3-accordion w3-light-grey">
+          <button onclick="myFunction('reply')" class="w3-btn-block w3-left-align w3-blue">@ <%= cdata[r].course %> : <%= cdata[r].id %></button>
+          <div id="reply" class="w3-accordion-content w3-container">
+          <br>
+            <textarea> <%= cdata[r].post %> </textarea>
+           </div>
+        </div>
+        </div>
+        <br>
+        <% } %>
+        <% } %>
 </div>
 </div>
-<br>
-
-<div id="abc" class="w3-card">
-<div class="w3-accordion w3-light-grey">
-  <button onclick="myFunction('acd')" class="w3-btn-block w3-left-align w3-green">* Lecture Cancelled*
-  </button>
-  <div id="acd" class="w3-accordion-content w3-container">
-  <br>
-    <p> I will not take any lectures this week</p>
-    <p> Go enjoy there is a holiday for everyone..</p>
-    
-   </div>
-</div>
-</div>
-
-
-</div>
-</div>
-
-
-
-
-
-
-
 
 <script>
 function myFunction(id) {

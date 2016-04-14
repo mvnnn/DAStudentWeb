@@ -2,11 +2,11 @@ var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
 var postSchema= Schema({
-  title:{
+  text:{
     type:String,
     required:true
   },
-  text:{
+  comment:{
     type:String,
     required:true
   },
