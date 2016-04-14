@@ -6,40 +6,21 @@
 
 <body>
 <% include Navbar.ejs %>
-<br>
 <!--  Repository Tab in Students Portal-->
-<div id="repos" class="w3-box-center">
+<div id="query" class="w3-box-center">
 
-           <ul class="w3-ul w3-card-4">
-              <li>@EL205: *Dislplay link* </li>
-          </ul>
-          <br>
-          <br>
-          <div class="w3-dropdown-click">
-               <button onclick="myFunction()" class="w3-btn">Select Course</button>
-                  <div id="repo" class="w3-dropdown-content w3-card">
-                  <a href="#">EL203</a>
-                 </div>
-          </div>
-
-      <script>
-          function myFunction() {
-          document.getElementById("repo").classList.toggle("w3-show");
-          }
-      </script>
-        <br>
-        <br>
-
-
-            <form class="w3-container">
-            <label class="w3-label">Enter link</label>
-            <br><br>
-            <textarea>Some link...</textarea>
-            </form>
+            <form method="post">
+            <label class="w3-label">Course Code</label>
+            <br>
+            <input class="w3-input w3-border w3-twothird" type="text" placeholder="Enter Course Code(eg. EL203)" name="ccode">
+            <br><br><br>
+            <label class="w3-label">Enter Link</label>
+            <br>
+            <textarea placeholder="Some Link...." name="text"></textarea>
 
             <br>
-              <button id="myBtn" class="w3-btn w3-ripple w3-teal w3-round-large">Submit</button>
-
+              <input type="submit" class="w3-btn w3-ripple w3-teal w3-round-large" value="Post">
+            </form>
 
       </div>
 
