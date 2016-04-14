@@ -1,3 +1,6 @@
+// mongodb schema to store links posted by the students
+
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

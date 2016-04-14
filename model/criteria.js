@@ -1,3 +1,5 @@
+// mongodb schema to store the criteria specified by the professor for each component
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

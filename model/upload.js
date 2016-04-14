@@ -1,3 +1,6 @@
+// mongodb schema to store marks uploaded by the professor
+
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

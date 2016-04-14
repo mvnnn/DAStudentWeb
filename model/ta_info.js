@@ -1,3 +1,6 @@
+// mongodb schema to store the information related to the TA's for the specific course
+
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

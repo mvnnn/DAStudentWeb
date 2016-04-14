@@ -1,3 +1,6 @@
+// mongodb schema to store course name, course id and credits for specific course
+
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

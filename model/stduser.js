@@ -1,3 +1,6 @@
+// mongodb schema to store the signed in users in the system
+
+
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 

@@ -1,3 +1,5 @@
+// mongodb schema to store the comment posted by the professor specific to the course and the students registered for it
+
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

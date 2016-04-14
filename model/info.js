@@ -1,3 +1,5 @@
+// mongodb schema to store courses taken by the students
+
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

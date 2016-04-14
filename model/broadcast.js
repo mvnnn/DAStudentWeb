@@ -1,3 +1,4 @@
+// mongodb schema to store broadcast messages posted by the professor
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
