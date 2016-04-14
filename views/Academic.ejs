@@ -7,15 +7,21 @@
 <body>
 <% include Navbar.ejs %>
 
+
+<script>
+var x = document.getElementById("academic");
+x.className = "active";
+</script>
+
 <!--  Acad Info Tab in Students Portal-->
 <br><br>
 
 <div id="menu1" class="w3-box-center-white" align="center">
 
   <div class="columns" align="center">
-      <div class="w3-card-8 w3-red w3-div-card" data-toggle="modal" data-target="#myModaltime"><h3 class="w3-padding-card">TimeTable</h3></div>
-      <div class="w3-card-8 w3-black w3-div-card" data-toggle="modal" data-target="#myModalcourse"><h3 class="w3-padding-card" >Courses</h3></div>
-      <div class="w3-card-8 w3-blue w3-div-card" data-toggle="modal" data-target="#myModalbtech"><h3 class="w3-padding-card">Btech Curriculum</h3></div>
+      <div class="w3-card-8 w3-red w3-div-card" data-toggle="modal" data-target="#myModaltime"><h3 class="w3-padding-card">Schedule</h3></div>
+      <div class="w3-card-8 w3-black w3-div-card" data-toggle="modal" data-target="#myModalcourse"><h3 class="w3-padding-card" >Guidelines</h3></div>
+      <div class="w3-card-8 w3-blue w3-div-card" data-toggle="modal" data-target="#myModalbtech"><h3 class="w3-padding-card">Curriculum Info</h3></div>
       <div class="w3-card-8 w3-green w3-div-card" data-toggle="modal" data-target="#myModalother"><h3 class="w3-padding-card">Other Information</h3></div>
 
   </div>
@@ -29,16 +35,21 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Time-Table & Slots</h4>
+                  <h4 class="modal-title">Schedule</h4>
                 </div>
                 <div class="modal-body">
                  <ul class="w3-ul">
-                    <a href="E:\DA-IICT\daiictInfo\lecture.pdf" target="_blank"><li>Lecture Time Table</li></a>
-                    <a href="E:\DA-IICT\daiictInfo\lab.pdf" target="_blank"><li>Lab Time Table</li></a>
-                    <li>Insem-1 Time Table</li>
-                    <li>Insem-2 Time Table</li>
-                    <li>End Sem Time Table</li>
-                    <a href="E:\DA-IICT\daiictInfo\slot.pdf" target="_blank"><li>Slot- Winter 2015-16</li></a>
+                    <li><a href="/pdf/schedule/calender.pdf" target="_blank">Calender</a></li>
+                    <li><a href="/pdf/schedule/holidays.pdf" target="_blank">Holidays</a></li>
+                    <li><a href="/pdf/schedule/lecture.pdf" target="_blank">Lecture Time Table</a></li>
+                    <li><a href="/pdf/schedule/lab.pdf" target="_blank">Lab Time Table</a></li>
+                    <li><a href="/pdf/schedule/insem1.pdf" target="_blank">Insem-1 Time Table</li>
+                    <li><a href="/pdf/schedule/insem2.pdf" target="_blank">Insem-2 Time Table</li>
+                    <li><a href="/pdf/schedule/endsem.pdf" target="_blank">End Sem Time Table</li>
+                    <li><a href="/pdf/schedule/lab.pdf" target="_blank">Slot- Winter 2015-16</a></li>
+                    <li><a href="/pdf/schedule/courselist.pdf" target="_blank">Course List</a></li>
+
+
                 </ul>
                 </div>
                 <div class="modal-footer">
@@ -55,14 +66,16 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Courses</h4>
+                  <h4 class="modal-title">Guidelines</h4>
                 </div>
                 <div class="modal-body">
                   <ul class="w3-ul">
-                    <li>Core</li>
-                    <li>Elective</li>
-                    <li>Coures Offered</li>
-                    <li>etc.. btech cs or ict..</li>
+                    <li><a href="/pdf/guidelines/medical.pdf" target="_blank">Medical Facility & Emergency Procedures</a></li>
+                    <li><a href="/pdf/guidelines/adddrop.pdf" target="_blank">Course Adjustment Policy</a></li>
+                    <li><a href="/pdf/guidelines/discipline.pdf" target="_blank">Disciplinary Guidelines</a></li>
+                    <li><a href="/pdf/guidelines/exam.pdf" target="_blank">Exam Rules</a></li>
+                    <li><a href="/pdf/guidelines/vehiclerule.pdf" target="_blank">Vehicle Rules</a></li>
+
                 </ul>
                 </div>
                 <div class="modal-footer">
@@ -80,14 +93,14 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Btech Curriculum</h4>
+                  <h4 class="modal-title">Curriculum Info</h4>
                 </div>
                 <div class="modal-body">
-                       <ul class="w3-ul">
-                    <a href="E:\DA-IICT\daiictInfo\btechcur\AcademicRequirements.pdf" target="_blank"><li>Academic Requirements</li></a>
-                    <a href="E:\DA-IICT\daiictInfo\btechcur\BtechCurriculum.pdf" target="_blank"><li>Btech Curriculum</li></a>
-                    <a href="E:\DA-IICT\daiictInfo\btechcur\CPICalculation.pdf" target="_blank"><li>CPI Calculation</li></a>
-                    <li>etc....</li>
+                  <ul class="w3-ul">
+                    <li><a href="/pdf/curriculum/academic.pdf" target="_blank">Academic Requirements</a></li>
+
+                    <li><a href="/pdf/curriculum/btech.pdf" target="_blank">Btech Curriculum</a></li>
+                    <li><a href="/pdf/curriculum/cpi.pdf" target="_blank">CPI Calculation </a></li>
                 </ul>
                 </div>
                 <div class="modal-footer">
@@ -108,11 +121,15 @@
                 </div>
                 <div class="modal-body">
                   <ul class="w3-ul">
-                    <li>Academic Calender</li>
-                    <li>Holidays 2015-16</li>
-                    <li>It-Info</li>
-                    <li>Faculty Email and Shortname</li>
-                    <li>etc</li>
+
+                    <li><a href="/pdf/other/constitution.pdf" target="_blank">SBG Constitution</a></li>
+                    <li><a href="/pdf/other/clubs.pdf" target="_blank">SBG Clubs & Committees</a></li>
+
+                    <li><a href="/pdf/other/itinfo.pdf" target="_blank">IT Info</a></li>
+                    <li><a href="/pdf/other/officials.pdf" target="_blank">Officials</a></li>
+                    <li><a href="/pdf/other/faculty.pdf" target="_blank">Faculty Info</a></li>
+
+
                 </ul>
                 </div>
                 <div class="modal-footer">

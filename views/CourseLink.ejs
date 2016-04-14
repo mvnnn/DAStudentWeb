@@ -6,7 +6,10 @@
 
 <body>
 <% include CourseNavbar.ejs %>
-
+<script>
+var x = document.getElementById("rep");
+x.className = "active";
+</script>
 <div id="repos" class="w3-box-center-white">
 
   <% if(data) {%>

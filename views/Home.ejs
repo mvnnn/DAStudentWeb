@@ -2,6 +2,7 @@
 <html>
 <head>
 <% include Head.ejs %>
+
 </head>
 
 <body>
@@ -9,7 +10,10 @@
 <!--  ############################# End of Header ###########################################-->
 <!-- Home page info : about us -->
 <br>
-
+<script>
+var x = document.getElementById("home");
+x.className = "active";
+</script>
 <div class="w3-container">
 <div class="well"><h1 align="center">Welcome <%= std %></h1></div>
 
@@ -33,8 +37,8 @@
     <% for(var r=0; r < cdata.length; r++) { %>
         <div id="notification" class="w3-card">
         <div class="w3-accordion w3-light-grey">
-          <button onclick="myFunction('reply')" class="w3-btn-block w3-left-align w3-blue">@ <%= cdata[r].course %> : <%= cdata[r].id %></button>
-          <div id="reply" class="w3-accordion-content w3-container">
+          <button onclick="myFunction('<%= cdata[r].post %>')" class="w3-btn-block w3-left-align w3-blue">@ <%= cdata[r].course %> : <%= cdata[r].id %></button>
+          <div id="<%= cdata[r].post %>" class="w3-accordion-content w3-container">
           <br>
             <textarea> <%= cdata[r].post %> </textarea>
            </div>
@@ -43,12 +47,14 @@
         <br>
         <% } %>
         <% } %>
+        <p id="abc" class="hidden"></p>
 </div>
 </div>
 
 <script>
 function myFunction(id) {
     var x = document.getElementById(id);
+    document.getElementById('abc').innerHTML = x;
      if (x.classList) {
          x.classList.toggle("w3-show");
      } else {
@@ -61,7 +67,7 @@ function myFunction(id) {
  }
  </script>
 <!--  End of Home page  -->
-
+<br><br>
 <% include Footer.ejs %>
 
 </body>

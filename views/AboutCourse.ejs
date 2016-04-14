@@ -6,13 +6,16 @@
 
 <body>
 <% include CourseNavbar.ejs %>
-
+<script>
+var x = document.getElementById("aboutcourse");
+x.className = "active";
+</script>
 <!-- Home page info : about us -->
 <div class="tab-content">
     <div id="home">
           <p class="w3-justify w3-box-home">
             <!--  HOME TAB in Students Portal-->
-              <iframe src="/pdf/<%= data %>.pdf" style="width:1200px; height:500px;margin-left:20px" frameborder="0"></iframe>
+              <iframe src="/pdf/course/<%= data %>.pdf" style="width:1200px; height:500px;margin-left:20px" frameborder="0"></iframe>
             </p>
     </div>
 

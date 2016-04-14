@@ -18,7 +18,7 @@ var MyProfile = require('./routes/private/MyProfile');
 var MyCourses = require('./routes/private/MyCourses');
 var Queries = require('./routes/private/Queries');
 var Spi = require('./routes/private/SPI');
-var AcadStatus = require('./routes/private/AcadStatus');
+var Broadcast = require('./routes/private/Broadcast');
 var Repository = require('./routes/private/Repository');
 var Navbar = require('./routes/private/Navbar');
 
@@ -75,9 +75,7 @@ app.get('/Repository', Repository.repository);
 app.post('/Repository', Repository.postrepository);
 
 app.get('/SPI', Spi.spi_cpi);
-app.get('/AcadStatus', AcadStatus.acadStatus);
-// app.get('/Preferences', Navbar.preferences);
-// app.get('/Queires', Queires.queires);
+app.get('/Broadcast', Broadcast.broadcast);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
