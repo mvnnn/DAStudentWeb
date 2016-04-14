@@ -70,18 +70,20 @@ app.get('/MyCourses/*/CourseLink', MyCourses.courseLink);
 app.get('/Academic', Academic.academic);
 app.get('/Results', Results.results);
 app.get('/Queries', Queries.queries);
+app.get('/Forget', Authentication.forget);
+app.post('/Forget', Authentication.postforget);
 app.post('/Queries', Queries.postqueries);
 app.get('/Repository', Repository.repository);
 app.post('/Repository', Repository.postrepository);
 
 app.get('/SPI', Spi.spi_cpi);
 app.get('/Broadcast', Broadcast.broadcast);
-app.get('/Logout', Navbar.logout);
+// app.get('/Logout', Navbar.logout);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
 
-
+app.get('/*', Authentication.authentication);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

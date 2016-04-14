@@ -20,14 +20,15 @@ x.className = "active";
                   <% if(data[i].comment) {%>
                   <div id="notification" class="w3-card">
                   <div class="w3-accordion w3-light-grey">
-                    <button onclick="myFunction('reply')" class="w3-btn-block w3-left-align w3-blue">@ <%= data[i].course %> : <%= data[i].text %></button>
-                    <div id="reply" class="w3-accordion-content w3-container">
+                    <button onclick="myFunction('<%= data[i].comment %>')" class="w3-btn-block w3-left-align w3-blue">@ <%= data[i].course %> : <%= data[i].text %></button>
+                    <div id="<%= data[i].comment %>" class="w3-accordion-content w3-container">
                     <br>
                       <textarea> <%= data[i].comment %> </textarea>
                      </div>
                   </div>
                   </div>
                   <br>
+
                   <% } else {%>
 
                   <div id="abc" class="w3-card">
@@ -39,9 +40,11 @@ x.className = "active";
 
                      </div>
                   </div>
+
                   <% } %>
                   <% } %>
                   <% } %>
+                  <p id="abcd" class="hidden"></p>
                   </div>
 
 
@@ -56,6 +59,7 @@ x.className = "active";
                   <script>
                   function myFunction(id) {
                       var x = document.getElementById(id);
+                      document.getElementById('abcd').innerHTML = x;
                        if (x.classList) {
                            x.classList.toggle("w3-show");
                        } else {

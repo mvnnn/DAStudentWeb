@@ -84,3 +84,41 @@ exports.loginAuth=function(req,res){
 
   });
 };
+
+
+exports.forget=function(req,res){
+  res.render('Forget');
+};
+
+
+exports.postforget=function(req,res){
+  StdUser.findOne({std_id:req.body.id},
+    function(err, response){
+      if(err) throw err;
+
+  var smtp = nodemailer.createTransport("SMTP", {
+      service: "Gmail",
+      auth: {
+          user: "sen15.2016@gmail.com",
+          pass: "senteam15"
+      }
+  });
+
+
+
+  mailList ={};
+  mailList.to = req.body.id + "@daiict.ac.in";
+  mailList.subject = "Your courseaid Password";
+  mailList.text = 'Your password is :  "'+ response.password+'"';
+  smtp.sendMail(mailList, function(error, respons){
+      if(error){
+          console.log(error);
+      }
+      else{
+          console.log("Message sent: " + respons.message);
+
+      }
+  });
+res.redirect('Login');
+  });
+  };
