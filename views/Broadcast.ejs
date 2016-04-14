@@ -7,9 +7,42 @@
 <body>
 <% include Navbar.ejs %>
 
-      
+<div id="repos" class="w3-box-center-white">
+    <% if(data) {%>
+    <% for(r=0; r < data.length; r++) { %>
+        <div id="notification" class="w3-card">
+        <div class="w3-accordion w3-light-grey">
+          <button onclick="myFunction('<%= data[r].text %>')" class="w3-btn-block w3-left-align w3-green">@ <%= data[r].course %> : <%= data[r].text %></button>
+          <div id="<%= data[r].text %>" class="w3-accordion-content w3-container">
+          <br>
+            <textarea> <%= data[r].comment %> </textarea>
+           </div>
+        </div>
+        </div>
+        <br>
+        <% } %>
+        <% } %>
+        <p id="abc" class="hidden"></p>
+</div>
+</div>
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    document.getElementById('abc').innerHTML = x;
+     if (x.classList) {
+         x.classList.toggle("w3-show");
+     } else {
+         // Fallback for IE9 and earlier
+         if (x.className.indexOf("w3-show") == -1)
+             x.className = x.className + " w3-show";
+         else
+             x.className = x.className.replace("w3-show", "");
+     }
+ }
+ </script>
+<!--  End of Home page  -->
 
-<% include Footer.ejs %>
+
 
 </body>
 </html>

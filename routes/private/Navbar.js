@@ -15,7 +15,7 @@ exports.changePass=function(req,res){
       res.render('ChangePass');
     }
     else{
-      res.render('Authentication');
+      res.redirect('Authentication');
     }
     });
 };
@@ -37,7 +37,7 @@ exports.PostchangePass=function(req,res){
         });
     }
     else{
-      res.render('Authentication');
+      res.redirect('Authentication');
     }
     });
 };
@@ -49,7 +49,7 @@ exports.help=function(req,res){
       res.render('Help');
     }
     else{
-      res.render('Authentication');
+      res.redirect('Authentication');
     }
   });
 };
@@ -59,10 +59,10 @@ exports.logout=function(req,res){
     // console.log(response);
     if(response){
       res.clearCookie('token');
-      res.render('Authentication');
+      res.redirect('Authentication');
     }
     else{
-      res.render('Authentication');
+      res.redirect('Authentication');
     }
   });
 };

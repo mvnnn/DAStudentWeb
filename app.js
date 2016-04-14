@@ -76,6 +76,7 @@ app.post('/Repository', Repository.postrepository);
 
 app.get('/SPI', Spi.spi_cpi);
 app.get('/Broadcast', Broadcast.broadcast);
+app.get('/Logout', Navbar.logout);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);
