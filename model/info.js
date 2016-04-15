@@ -7,27 +7,26 @@ std_id : {
         type:Number,
         required:true
 },
-course_info : [
-        {course_name:{
-                type:String,
-                required:true
-         },
-          course:{
-                type:String,
-                required:true
-         },
-         credit:{
-                type:Number,
-                required:true
-         },
-         grade:{
-                type:String,
-                required:true
-         },
-         sem:{
-                type:Number,
-                required:true
-         }}]
+course_name:{
+        type:String,
+        required:true
+},
+course:{
+        type:String,
+        required:true
+},
+credit:{
+        type:Number,
+        required:true
+},
+grade:{
+        type:String,
+        required:true
+},
+sem:{
+        type:Number,
+        required:true
+    }
 });
 
 module.exports = mongoose.model("info", PostSchema);

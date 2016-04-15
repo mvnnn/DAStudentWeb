@@ -53,7 +53,7 @@ app.set('x-powered-by',false);
 
 // private routes
 app.get('/', Authentication.authentication);
-app.get('/Authentication', Navbar.logout);
+app.get('/Authentication', Authentication.authentication);
 app.get('/Login', Authentication.login);
 app.post('/Login', Authentication.loginAuth);
 app.get('/SignUp', Authentication.signUp);
@@ -77,8 +77,9 @@ app.get('/Repository', Repository.repository);
 app.post('/Repository', Repository.postrepository);
 
 app.get('/SPI', Spi.spi_cpi);
+app.post('/SPI', Spi.Gen_spi_cpi);
 app.get('/Broadcast', Broadcast.broadcast);
-// app.get('/Logout', Navbar.logout);
+app.get('/Logout', Navbar.logout);
 app.get('/ChangePass', Navbar.changePass);
 app.post('/ChangePass', Navbar.PostchangePass);
 app.get('/Help', Navbar.help);

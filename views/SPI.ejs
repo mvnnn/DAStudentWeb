@@ -23,28 +23,28 @@
                 <div class="w3-box-center w3-light-grey w3-border">
                   <br>
                   <br>
-                  <p><label>Enter your current CPI</label>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="current_cpi" type="number"></p>
-                  <br>
+                  <form method="post">
                   <p><label>Enter the CPI you want</label>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="desired_cpi" type="number"></p>
+                  <input name="desired_cpi" type="number" step="0.01"></p>
                   <br>
-                   <input onclick="document.getElementById('submit').style.display='block'" type="submit" value="Submit" class="col-md-3 text-center"><br>
+                   <input type="submit" value="Submit" class="col-md-3 text-center"><br>
                    <br>
+                 </form>
                 </div>
         </p>
       </div>
 
-
-<div id="submit" class="w3-modal">
-  <div class="w3-modal-content w3-animate-top w3-card-8">
-    <div class="w3-container w3-teal w3-card-8">
-      <span onclick="document.getElementById('submit').style.display='none'"
-      class="w3-closebtn">×</span>
-      <p><font size="5">You need to score bla.bla</font></p>
-      </div>
-  </div>
+<% if(data == "NN") {%>
+  <h2 align="center">That's not possible</h2>
+<% } %>
+<% if(data == "AA") {%>
+<div class="well w3-cyan">
+  <h2 align="center">You need to Score: <%= spi_req %></h2>
+  <p align="center"> Your Current CPI: <%= cpi %></p>
+  <p align="center"> Max Achievable CPI (this semester): <%= max %></p>
+  <p align="center"> Corresponding SPI (required): <%= spi_req %></p>
 </div>
+<% } %>
 
 <!--  including the footer information-->
 
