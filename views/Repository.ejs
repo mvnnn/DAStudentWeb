@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+      <title>Repository</title>
 <% include Head.ejs %>
+<!--  including header information -->
+
 </head>
 
 <body>
 <% include Navbar.ejs %>
+<!--  including navigation bar-->
 
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("rep");
 x.className = "active";
 </script>
 
 
-<!--  Repository Tab in Students Portal-->
+<!--  Repository Tabl-->
 <div id="query" class="w3-box-center">
 
             <form method="post">
@@ -31,6 +37,7 @@ x.className = "active";
 
       </div>
 
+<!--  including the footer information-->
 <% include Footer.ejs %>
 
 </body>

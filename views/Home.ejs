@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Student's Home</title>
 <% include Head.ejs %>
-
+<!-- including the head information -->
 </head>
 
 <body>
 <% include Navbar.ejs %>
-<!--  ############################# End of Header ###########################################-->
+<!--  including the navigation bar-->
+
 <!-- Home page info : about us -->
 <br>
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("home");
 x.className = "active";
 </script>
+
+
+
 <div class="w3-container">
 <div class="well"><h1 align="center">Welcome <%= std %></h1></div>
 
@@ -51,6 +58,7 @@ x.className = "active";
 </div>
 </div>
 
+<!--  script to toggle the accordion button -->
 <script>
 function myFunction(id) {
     var x = document.getElementById(id);
@@ -68,6 +76,8 @@ function myFunction(id) {
  </script>
 <!--  End of Home page  -->
 <br><br>
+
+<!-- including footer  -->
 <% include Footer.ejs %>
 
 </body>

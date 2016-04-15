@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>TAs Detail</title>
 <% include Head.ejs %>
+<!-- including the header information  -->
 </head>
 
 <body>
+    <!-- including the course navigation bar -->
 <% include CourseNavbar.ejs %>
+
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("tadetail");
 x.className = "active";
 </script>
+
+<!--  ta details -->
 <div id="menu2">
             <div class="w3-box-center-table">
             <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable">
@@ -46,6 +54,7 @@ x.className = "active";
        </div>
     </div>
 
+<!-- including footer information  -->
 <% include Footer.ejs %>
 
 </body>

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Course Repository</title>
 <% include Head.ejs %>
+<!-- including header information  -->
 </head>
 
 <body>
+    <!-- including course navigation bar  -->
 <% include CourseNavbar.ejs %>
 <script>
 var x = document.getElementById("rep");
 x.className = "active";
 </script>
+
+
+<!-- Displaying the course repository links together specific to the course  -->
 <div id="repos" class="w3-box-center-white">
 
   <% if(data) {%>
@@ -34,8 +40,8 @@ x.className = "active";
 
 <br>
 
-<!--  End of Home page  -->
 
+<!-- including footer  -->
 <% include Footer.ejs %>
 
 </body>

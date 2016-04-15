@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>About Course</title>
+    <!--  including header information -->
 <% include Head.ejs %>
 </head>
 
 <body>
+
+<!--  including navigation bar-->
 <% include CourseNavbar.ejs %>
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("aboutcourse");
 x.className = "active";
 </script>
-<!-- Home page info : about us -->
+
+
+<!-- Starting of About Course Page  -->
+
+
+<!-- displaying the course pdf in the iframe  -->
 <div class="tab-content">
     <div id="home">
           <p class="w3-justify w3-box-home">
@@ -20,7 +31,9 @@ x.className = "active";
     </div>
 
     <br><br> <br>
-<!--  End of Home page  -->
+<!--  End of  About Course Page  -->
+
+<!--  including footer-->
 
 <% include Footer.ejs %>
 

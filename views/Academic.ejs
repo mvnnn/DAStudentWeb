@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Academic Information</title>
+    <!--  including header information -->
 <% include Head.ejs %>
 </head>
 
 <body>
+
+    <!--  including navigation bar-->
 <% include Navbar.ejs %>
 
-
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("academic");
 x.className = "active";
 </script>
 
-<!--  Acad Info Tab in Students Portal-->
+<!--  Academic Info Tab in Students Web App -->
 <br><br>
 
 <div id="menu1" class="w3-box-center-white" align="center">
@@ -29,7 +33,7 @@ x.className = "active";
 
         <div class="container">
 
-        <!-- Modal  Time table-->
+        <!-- Modal  Schedule-->
           <div class="modal fade" id="myModaltime" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -60,7 +64,7 @@ x.className = "active";
           </div>
 
 
-          <!-- Modal  Course-->
+          <!-- Modal  Guidelines-->
           <div class="modal fade" id="myModalcourse" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -144,7 +148,7 @@ x.className = "active";
 
 </div>
 
-
+<!--  including footer-->
 <% include Footer.ejs %>
 
 </body>

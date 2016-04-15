@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Profile</title>
 <% include Head.ejs %>
+<!--  including the header information-->
 </head>
 
 <body>
 <% include Navbar.ejs %>
-
-<!--  ############################# End of Header ###########################################-->
-
-
-<!--  My Profile Tab in Students Portal-->
+<!--  including the navigation bar -->
 
 
+<!--  My Profile Tab -->
+
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("myprofile");
 x.className = "active";
 </script>
+
+
+<!--  user's profile information-->
+
 
 <div id="profile" class="tab-pane fade in active">
 
@@ -42,6 +48,7 @@ x.className = "active";
 </div><!-- @end #content -->
 </div><!-- @end #w -->
 
+<!--  including the footer information-->
 <% include Footer.ejs %>
 </body>
 </html>

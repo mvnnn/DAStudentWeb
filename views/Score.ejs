@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Check Score</title>
 <% include Head.ejs %>
+<!--  including header information -->
+
 </head>
 
 <body>
+    <!--  including navigation bar-->
 <% include CourseNavbar.ejs %>
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("score");
 x.className = "active";
 </script>
+
+
 <!-- Course Score Window  -->
 <div id="menu3">
     <div class="w3-box-center-table">
@@ -86,6 +94,8 @@ x.className = "active";
 </div>
 <!--  End of score page  -->
 
+
+<!--  including the footer information-->
 <% include Footer.ejs %>
 
 </body>

@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Course Queries</title>
 <% include Head.ejs %>
+<!--  including header information-->
 </head>
 
 <body>
+    <!--  including course navigation bar -->
 <% include CourseNavbar.ejs %>
+
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("query");
 x.className = "active";
 </script>
-<!-- Home page info : about us -->
 
-            <!--  HOME TAB in Students Portal-->
-            <div id="repos" class="w3-box-center-white">
+<!--  Course queries specific to the course -->
+    <div id="repos" class="w3-box-center-white">
 
-              <% if(data) {%>
-              <% for(var i=0; i < data.length; i++) { %>
-                  <% if(data[i].comment) {%>
-                  <div id="notification" class="w3-card">
-                  <div class="w3-accordion w3-light-grey">
-                    <button onclick="myFunction('<%= data[i].comment %>')" class="w3-btn-block w3-left-align w3-blue">@ <%= data[i].course %> : <%= data[i].text %></button>
-                    <div id="<%= data[i].comment %>" class="w3-accordion-content w3-container">
-                    <br>
-                      <textarea> <%= data[i].comment %> </textarea>
-                     </div>
-                  </div>
-                  </div>
-                  <br>
+    <% if(data) {%>
+    <% for(var i=0; i < data.length; i++) { %>
+    <% if(data[i].comment) {%>
+    <div id="notification" class="w3-card">
+    <div class="w3-accordion w3-light-grey">
+    <button onclick="myFunction('<%= data[i].comment %>')" class="w3-btn-block w3-left-align w3-blue">@ <%= data[i].course %> : <%= data[i].text %></button>
+    <div id="<%= data[i].comment %>" class="w3-accordion-content w3-container">
+    <br>
+      <textarea> <%= data[i].comment %> </textarea>
+     </div>
+    </div>
+    </div>
+    <br>
 
-                  <% } else {%>
+    <% } else {%>
 
-                  <div id="abc" class="w3-card">
-                  <div class="w3-accordion w3-light-grey">
-                    <p class="w3-btn-block w3-left-align w3-green">
-                    @ <%= data[i].course %> : <%= data[i].text %>
-                    </p>
-
-
-                     </div>
-                  </div>
-
-                  <% } %>
-                  <% } %>
-                  <% } %>
-                  <p id="abcd" class="hidden"></p>
-                  </div>
+    <div id="abc" class="w3-card">
+    <div class="w3-accordion w3-light-grey">
+    <p class="w3-btn-block w3-left-align w3-green">
+    @ <%= data[i].course %> : <%= data[i].text %>
+    </p>
 
 
-                  </div>
-                  </div>
-</div>
+     </div>
+    </div>
 
+    <% } %>
+    <% } %>
+    <% } %>
+    <p id="abcd" class="hidden"></p>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
 
 
 
 
-                  <script>
-                  function myFunction(id) {
-                      var x = document.getElementById(id);
-                      document.getElementById('abcd').innerHTML = x;
-                       if (x.classList) {
-                           x.classList.toggle("w3-show");
-                       } else {
-                           // Fallback for IE9 and earlier
-                           if (x.className.indexOf("w3-show") == -1)
-                               x.className = x.className + " w3-show";
-                           else
-                               x.className = x.className.replace("w3-show", "");
-                       }
-                   }
-                   </script>
+<!--  script to toggle the accordion button -->
+  <script>
+  function myFunction(id) {
+      var x = document.getElementById(id);
+      document.getElementById('abcd').innerHTML = x;
+       if (x.classList) {
+           x.classList.toggle("w3-show");
+       } else {
+           // Fallback for IE9 and earlier
+           if (x.className.indexOf("w3-show") == -1)
+               x.className = x.className + " w3-show";
+           else
+               x.className = x.className.replace("w3-show", "");
+       }
+   }
+   </script>
 <br>
 
-<!--  End of Home page  -->
-
+<!-- including the footer  -->
 <% include Footer.ejs %>
 
 </body>

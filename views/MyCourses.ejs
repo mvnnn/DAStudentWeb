@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>My Courses</title>
 <% include Head.ejs %>
+<!--  including the header information  -->
 </head>
 
 <body>
 <% include Navbar.ejs %>
-<!--  ############################# End of Header ###########################################-->
-<!--  here it will include about the courses of professor...........-->
-<!--  My Courses Tab in Students Portal-->
+<!-- including the navigation bar -->
 
 
+<!--  My Courses Tab : it would show the courses taken by the professor -->
+
+<!-- script to make current tab active in the navigation bar -->
 <script>
 var x = document.getElementById("mycourses");
 x.className = "active";
@@ -43,6 +46,7 @@ x.className = "active";
 
 <br><br><br><br><br><br><br>
 
+<!--  including the footer information-->
 <% include Footer.ejs %>
 
 </body>

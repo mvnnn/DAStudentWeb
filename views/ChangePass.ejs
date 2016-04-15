@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Change Password</title>
+    <!--  including header information -->
 <% include Head.ejs %>
 </head>
 
 <body>
+    <!--  including navigation bar-->
 <% include Navbar.ejs %>
 
+
+<!-- Change password   -->
 <div id="changepswd" class="w3-box-changepswd">
       <h2>Change Password</h2>
       <br/>
@@ -19,7 +24,7 @@
       <input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
       <br>
       <label for="confirmPassword">Confirm Password:</label>
-      <input type="text" id="token" name="token" title="Password Token" />
+      <input type="password" id="token" name="token" title="Password Token" />
       <br><br>
       <p class="form-actions">
       <input type="submit" value="Change Password" title="Change password" />
@@ -28,6 +33,7 @@
       </form>
 </div>
 
+<!-- including footer  -->
 <% include Footer.ejs %>
 
 </body>
