@@ -30,6 +30,7 @@ exports.results=function(req,res){
         var sem2 = [];
       }
       if(pp == 5){
+        var sem0 = [];
         nn = 1;
       }
       // console.log(nn);
@@ -56,12 +57,46 @@ exports.results=function(req,res){
         }
       }
 
+      for(var j=0;j<nn;j++){
+        for(var i=0;i<respo.length;i++){
+          if(respo[i].sem == (j+1)){
+            if(j == 0){
+              sem0.push(respo[i]);
+            }
+            if(j == 1){
+              sem1.push(respo[i]);
+            }
+            if(j == 2){
+              sem2.push(respo[i]);
+            }
+          }
+      }
+    }
+
+    for(var j=0;j<nn;j++){
+      for(var i=0;i<respo.length;i++){
+        if(respo[i].sem == (j+1)){
+          if(j == 0){
+            sem0.push(respo[i]);
+          }
+        }
+    }
+    }
+
       if(nn == 5){
         data.push(sem0);
         data.push(sem1);
         data.push(sem2);
         data.push(sem3);
         data.push(sem4);
+      }
+      if(nn == 3){
+        data.push(sem0);
+        data.push(sem1);
+        data.push(sem2);
+      }
+      if(nn == 1){
+        data.push(sem0);
       }
       console.log(data);
       res.render('Results',{data:data});

@@ -43,7 +43,6 @@ x.className = "active";
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                  <!-- <h4 class="modal-title">Semester <%= data[r][w].sem %></h4> -->
                 </div>
 
                 <div class="modal-body">
@@ -56,11 +55,11 @@ x.className = "active";
                                 <th class="w3-grey">Grade</th>
                               </tr>
                               </thead>
-                              <% for(w=0;  w< data[r].length; w++) { %>
+                              <% for(w=0;  w< data[0].length; w++) { %>
                               <tr>
-                                <td><%= data[r][w].course_name %></td>
-                                <td><%= data[r][w].credit %></td>
-                                <td><%= data[r][w].grade %></td>
+                                <td><%= data[0][w].course_name %></td>
+                                <td><%= data[0][w].credit %></td>
+                                <td><%= data[0][w].grade %></td>
                               </tr>
                                 <% } %>
                           </table>
@@ -73,6 +72,7 @@ x.className = "active";
             </div>
           </div>
         </div>
+
 
 <% include Footer.ejs %>
 
