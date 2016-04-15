@@ -24,26 +24,27 @@ x.className = "active";
     <tr class="w3-light-grey">
       <th class="w3-grey">Course ID</th>
       <th class="w3-grey">Course Name</th>
+      <th class="w3-grey">Credits</th>
     </tr>
     </thead>
-
     <% if(data) {%>
-      <% for(var i=0; i < data.length; i++) { %>
+      <% for(i=0; i < data.length; i++) { %>
     <tr>
       <form method="get" name="form">
       <td><a href='MyCourses/<%= data[i].course %>/CourseHome'><%= data[i].course %></a></td>
+      <td><a href='MyCourses/<%= data[i].course %>/CourseHome'><%= data[i].course_name %></a></td>
+      <td><p><%= data[i].credit %></p></td>
       </form>
     </tr>
     <% } %>
     <% } %>
 </table>
 </div>
+</div>
 
 
 
 <br><br><br><br><br><br><br>
-
-<% include Footer.ejs %>
 
 </body>
 </html>

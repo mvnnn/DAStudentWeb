@@ -8,6 +8,7 @@
 <% include Navbar.ejs %>
 
 <div id="repos" class="w3-box-center-white">
+    <%= data %>
     <% if(data) {%>
     <% for(r=0; r < data.length; r++) { %>
         <div id="notification" class="w3-card">
