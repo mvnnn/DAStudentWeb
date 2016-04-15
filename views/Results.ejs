@@ -24,7 +24,7 @@ x.className = "active";
         </thead>
         <% for(r=0; r < data.length; r++) { %>
             <% for(w=0;  w< 1; w++) { %>
-        <tr data-toggle="modal" data-target="#r">
+        <tr data-toggle="modal" data-target="#semester1">
           <td>Semester <%= data[r][0].sem %> </td>
         </tr>
         <% } %>
@@ -37,12 +37,15 @@ x.className = "active";
     </div>
 
 
-  <div class="modal fade" id="r" role="dialog">
+    <!-- <% if(data) {%> -->
+    <!-- <% for(r=0; r < 1; r++) { %> -->
+  <div class="modal fade" id="semester1" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
+                  <!-- <h4 class="modal-title">Semester <%= data[r][w].sem %></h4> -->
                 </div>
 
                 <div class="modal-body">
@@ -72,7 +75,8 @@ x.className = "active";
             </div>
           </div>
         </div>
-
+        <!-- <% } %>
+        <% } %> -->
 
 <% include Footer.ejs %>
 
