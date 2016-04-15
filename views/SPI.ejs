@@ -31,18 +31,20 @@
         </p>
       </div>
 
+<% if(data == null) {%>
+  <h2 align="center">Get expected cpi and spi here</h2>
+<% } %>
 <% if(data == "NN") {%>
-
   <h2 align="center">That's not possible</h2>
-
-<% }else {%>
+<% } %>
+<% if(data == "AA") {%>
 <div class="well">
   <h2 align="center">You need to Score</h2>
   <p align="center"> cpi is: <%= cpi %></p>
   <p align="center"> max cpi achievable is: <%= max %></p>
   <p align="center"> spi_req is: <%= spi_req %></p>
 </div>
-        <% } %>
+<% } %>
 <% include Footer.ejs %>
 
 </body>
