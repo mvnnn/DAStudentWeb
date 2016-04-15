@@ -13,6 +13,7 @@ var x = document.getElementById("result");
 x.className = "active";
 </script>
 
+<%= data %>
 <!--  Result Tab in Students Portal-->
     <div id="menu3">
         <div class="w3-box-center-table">
@@ -22,13 +23,16 @@ x.className = "active";
           <th class="w3-grey">Semester</th>
         </tr>
         </thead>
+        <%= if(data == null) {%>
+          <h1> No data </h1>
+          <%}%>
+        <%= if(data) {%>
         <% for(r=0; r < data.length; r++) { %>
-            <% for(w=0;  w< 1; w++) { %>
-        <tr data-toggle="modal" data-target="#r">
+        <tr data-toggle="modal" data-target="#semester1">
           <td>Semester <%= data[r][0].sem %> </td>
         </tr>
-        <% } %>
-                <% } %>
+              <% } %>
+                  <% } %>
   </table>
   <br>
 </div>
@@ -37,13 +41,14 @@ x.className = "active";
     </div>
 
 
-  <div class="modal fade" id="r" role="dialog">
+
+  <div class="modal fade" id="semester1" role="dialog">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                  <!-- <h4 class="modal-title">Semester <%= data[r][w].sem %></h4> -->
+
                 </div>
 
                 <div class="modal-body">
@@ -56,13 +61,15 @@ x.className = "active";
                                 <th class="w3-grey">Grade</th>
                               </tr>
                               </thead>
-                              <% for(w=0;  w< data[r].length; w++) { %>
+                              <%= if(data){ %>
+                              <% for(w=0;  w< data[0].length; w++) { %>
                               <tr>
-                                <td><%= data[r][w].course_name %></td>
-                                <td><%= data[r][w].credit %></td>
-                                <td><%= data[r][w].grade %></td>
+                                <td><%= data[0][w].course_name %></td>
+                                <td><%= data[0][w].credit %></td>
+                                <td><%= data[0][w].grade %></td>
                               </tr>
                                 <% } %>
+                                  <% } %>
                           </table>
                           </div>
                 <div class="modal-footer">
